@@ -47,3 +47,11 @@ IA consultada: Gemini
 Nivel de pensamiento: Flash Extendido
 Mensaje enviado: "Gracias gemini, me puedes ayudar ahora con hacer un tratamiento de datos según la Ley 19.628:tipos, distinción personales/sensibles y derechos ARCO en base al caso del hackeo? por favor."
 Donde se uso: En la obtencion de datos segun lo pedido en la rubica y organizar dichos datos obtenidos. 
+
+
+
+Promt 7_conclusion:
+IA consultada: Gemini
+Nivel de pensamiento: Flash Extendido
+Mensaje enviado: "Y para finalizar gemini, que recomendaciones de seguridad darias y que reflexión final del análisis?"
+Donde se uso: En la complementacion de la informacion y guia para obtener fundamentos claros en la conclusion

@@ -23,10 +23,3 @@ Si a raíz de la filtración el ciudadano nota que su ficha judicial contiene er
 Es el derecho a solicitar que se borren los datos de los registros públicos si su almacenamiento ya no cuenta con respaldo legal o si el plazo legal de conservación ya expiró (datos caducos).
 
     El límite: El titular no puede exigir la eliminación de sus antecedentes si estos siguen siendo necesarios por mandato legal para un proceso judicial en curso o el cumplimiento de una condena activa.
-
-
-Oposición (o Bloqueo)
-
-Permite pedir que los datos dejen de ser utilizados para fines específicos o que se suspendan temporalmente las operaciones de tratamiento (bloqueo) mientras se verifica si la información es exacta o si corresponde legítimamente su eliminación definitiva.
-
-    En conclusión: Si el caso ocurriese bajo el alero de la Ley 19.628, el Estado chileno habría estado plenamente facultado para recolectar los antecedentes, pero la filtración por negligencia en sus accesos informáticos habría constituido una vulneración grave al principio de seguridad, activando de inmediato el derecho de los ciudadanos a exigir la rectificación de sus perfiles y las compensaciones legales correspondientes.    

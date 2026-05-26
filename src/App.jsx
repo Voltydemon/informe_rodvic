@@ -2,26 +2,27 @@ import './App.css'
 
 import {
   FaBook,
+  FaGavel,
   FaShieldAlt,
   FaDatabase,
-  FaGavel,
   FaUserSecret,
   FaBalanceScale,
   FaLock,
-  FaCheckCircle,
 } from 'react-icons/fa'
 
-function Section({ icon, title, children }) {
+function DocSection({ id, icon, title, children }) {
   return (
-    <section className="card">
+    <section id={id} className="doc-section">
 
-      <div className="card-header">
-        <div className="icon">{icon}</div>
+      <div className="section-title">
+        <span className="section-icon">
+          {icon}
+        </span>
 
         <h2>{title}</h2>
       </div>
 
-      <div className="card-content">
+      <div className="section-content">
         {children}
       </div>
 
@@ -30,332 +31,233 @@ function Section({ icon, title, children }) {
 }
 
 function App() {
+
   return (
-    <div className="app">
 
-      <div className="background-glow"></div>
+    <div className="layout">
 
-      <header className="hero">
+      <aside className="sidebar">
 
-        <p className="tag">
-          INFORME JURÍDICO Y FORENSE DIGITAL
-        </p>
+        <h1>RodVic</h1>
 
-        <h1>
-          Ciberataque al
-          <span> Ministerio de Francia</span>
-        </h1>
+        <nav>
 
-        <p className="subtitle">
-          Investigación jurídica, técnica y comparativa
-          sobre el ataque a las bases de datos criminales francesas.
-        </p>
+          <a href="#resumen">
+            Resumen
+          </a>
 
-      </header>
+          <a href="#legal">
+            Marco Legal
+          </a>
 
-      <main className="grid">
+          <a href="#leychilena">
+            Ley 21.459
+          </a>
+
+          <a href="#comparacion">
+            Comparación
+          </a>
+
+          <a href="#responsabilidades">
+            Responsabilidades
+          </a>
+
+          <a href="#datos">
+            Protección de Datos
+          </a>
+
+          <a href="#conclusiones">
+            Conclusiones
+          </a>
+
+        </nav>
+
+      </aside>
+
+      <main className="content">
+
+        <header className="hero">
+
+          <p className="tag">
+            INFORME FORENSE DIGITAL
+          </p>
+
+          <h1>
+            Ciberataque al
+            <span> Ministerio de Francia</span>
+          </h1>
+
+          <p className="subtitle">
+            Investigación jurídica, técnica y comparativa
+            sobre el ataque a bases de datos criminales.
+          </p>
+
+        </header>
 
         {/* RESUMEN */}
 
-        <Section
+        <DocSection
+          id="resumen"
           icon={<FaBook />}
           title="1. Resumen del Caso"
         >
 
           <p>
-            El 12 de diciembre de 2025 el Ministerio de Francia sufrió
-            un ciberataque dirigido a sus servidores de correo electrónico.
+            El 12 de diciembre de 2025 el Ministerio de Francia
+            sufrió un ciberataque dirigido a sus servidores de correo.
           </p>
 
           <p>
-            Durante el ataque los atacantes consiguieron acceso a dos
-            de las bases de datos más sensibles del Estado:
+            Los atacantes consiguieron acceso a sistemas críticos
+            relacionados con historiales criminales y personas buscadas.
           </p>
 
           <ul>
-            <li>Sistema de historiales criminales</li>
-            <li>Base de datos de personas buscadas</li>
+            <li>Acceso a bases de datos sensibles</li>
+            <li>Compromiso de credenciales</li>
+            <li>Filtración de información</li>
           </ul>
 
-          <p>
-            Mientras la investigación se desarrollaba, el gobierno francés
-            reforzó sus medidas de seguridad y controles de acceso.
-          </p>
-
-          <p>
-            Cinco días después, la Oficina de Anticiberdelincuencia
-            de Francia (OFAC) detuvo a un joven de 22 años relacionado
-            con el incidente.
-          </p>
-
-        </Section>
-
+        </DocSection>
 
         {/* MARCO LEGAL */}
 
-        <Section
+        <DocSection
+          id="legal"
           icon={<FaGavel />}
           title="2. Marco Legal Francés"
         >
 
           <p>
-            Al detenido se le aplicó la Ley N°88-19,
-            también conocida como Ley Godfrain,
-            junto con los artículos 323-1 al 323-3.
+            Francia aplica la Ley Godfrain y los artículos
+            323-1 al 323-3 del código penal.
           </p>
 
-          <p>
-            Esta ley modifica el código penal francés
-            en el ámbito de fraudes informáticos.
-          </p>
-
-          <div className="mini-grid">
-
-            <div className="mini-card">
-              <h3>Acceso Fraudulento</h3>
-
-              <p>
-                Acceso no autorizado a sistemas informáticos.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>Alteración de Datos</h3>
-
-              <p>
-                Destrucción, modificación o sabotaje de información.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>Falsificación Informática</h3>
-
-              <p>
-                Manipulación y falsificación de documentos digitales.
-              </p>
-            </div>
-
+          <div className="info-box">
+            Artículo 323-1:
+            acceso fraudulento a sistemas automatizados.
           </div>
 
-          <div className="quote">
-            Artículo 323-1: castiga el acceso fraudulento
-            a sistemas automatizados con penas de prisión
-            y multas económicas.
+          <div className="info-box">
+            Artículo 323-2:
+            sabotaje o alteración de sistemas.
           </div>
 
-        </Section>
+          <div className="info-box">
+            Artículo 323-3:
+            extracción o modificación ilegal de datos.
+          </div>
 
+        </DocSection>
 
         {/* LEY CHILENA */}
 
-        <Section
+        <DocSection
+          id="leychilena"
           icon={<FaBalanceScale />}
           title="3. Ley 21.459 de Chile"
         >
 
           <p>
-            La Ley 21.459 fue promulgada en Chile en 2022
-            para modernizar la legislación sobre delitos informáticos.
+            La Ley 21.459 moderniza la legislación chilena
+            sobre delitos informáticos.
           </p>
-
-          <p>
-            Esta normativa reemplazó la antigua Ley 19.223
-            y adapta la legislación chilena al Convenio de Budapest.
-          </p>
-
-          <h3 className="sub-title">
-            Tipificación posible del caso
-          </h3>
 
           <ul>
             <li>Acceso ilícito</li>
-
-            <li>Obtención indebida de información</li>
-
-            <li>Divulgación de datos</li>
-
-            <li>Uso malicioso de sistemas</li>
-
-            <li>Violación de medidas de seguridad</li>
+            <li>Obtención indebida de datos</li>
+            <li>Difusión de información</li>
+            <li>Interferencia de sistemas</li>
           </ul>
 
-        </Section>
+        </DocSection>
 
+        {/* COMPARACIÓN */}
 
-        {/* COMPARACION */}
-
-        <Section
+        <DocSection
+          id="comparacion"
           icon={<FaDatabase />}
           title="4. Comparación Normativa"
         >
 
-          <p>
-            El informe compara distintos marcos regulatorios
-            aplicables al caso investigado.
-          </p>
-
-          <div className="mini-grid">
-
-            <div className="mini-card">
-              <h3>RGPD</h3>
-
-              <p>
-                Obligación de proteger datos personales
-                y notificar brechas de seguridad.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>NIS 2</h3>
-
-              <p>
-                Exige medidas estrictas de ciberseguridad
-                en organismos esenciales del Estado.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>ANSSI</h3>
-
-              <p>
-                Agencia francesa encargada de supervisar
-                incidentes críticos de seguridad.
-              </p>
-            </div>
-
+          <div className="info-box">
+            RGPD:
+            protección de datos personales.
           </div>
 
-          <p>
-            El caso demuestra la importancia de la gobernanza,
-            auditorías y protección de infraestructura crítica.
-          </p>
+          <div className="info-box">
+            NIS2:
+            medidas obligatorias de ciberseguridad.
+          </div>
 
-        </Section>
+          <div className="info-box">
+            ANSSI:
+            respuesta frente a incidentes críticos.
+          </div>
 
+        </DocSection>
 
         {/* RESPONSABILIDADES */}
 
-        <Section
+        <DocSection
+          id="responsabilidades"
           icon={<FaUserSecret />}
           title="5. Responsabilidades"
         >
 
           <p>
             El principal sospechoso fue un joven de 22 años
-            vinculado a grupos de hackers organizados.
+            relacionado con grupos organizados de hackers.
           </p>
 
           <p>
-            Según la investigación, el ataque habría sido
-            una represalia por arrestos anteriores
-            relacionados con ShinyHunters.
+            El ataque habría sido una represalia
+            por arrestos anteriores.
           </p>
 
-          <ul>
-            <li>
-              Ataque a sistemas automatizados del Estado
-            </li>
-
-            <li>
-              Participación en grupo organizado
-            </li>
-
-            <li>
-              Acceso y manipulación de información sensible
-            </li>
-          </ul>
-
-        </Section>
-
+        </DocSection>
 
         {/* DATOS */}
 
-        <Section
+        <DocSection
+          id="datos"
           icon={<FaLock />}
-          title="6. Tratamiento de Datos y Derechos ARCO"
+          title="6. Protección de Datos"
         >
 
           <p>
-            La Ley 19.628 permite a organismos públicos
-            tratar datos penales dentro de sus competencias.
+            La Ley 19.628 regula el tratamiento de datos personales.
           </p>
 
-          <p>
-            Sin embargo, también exige medidas de seguridad
-            y protección adecuadas.
-          </p>
+          <ul>
+            <li>Derecho de acceso</li>
+            <li>Derecho de rectificación</li>
+            <li>Derecho de cancelación</li>
+            <li>Derecho de oposición</li>
+          </ul>
 
-          <div className="mini-grid">
-
-            <div className="mini-card">
-              <h3>Acceso</h3>
-
-              <p>
-                Derecho a conocer qué información existe.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>Rectificación</h3>
-
-              <p>
-                Corrección de datos incorrectos.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>Cancelación</h3>
-
-              <p>
-                Solicitud de eliminación de datos.
-              </p>
-            </div>
-
-            <div className="mini-card">
-              <h3>Oposición</h3>
-
-              <p>
-                Limitar determinados tratamientos.
-              </p>
-            </div>
-
-          </div>
-
-        </Section>
-
+        </DocSection>
 
         {/* CONCLUSIONES */}
 
-        <Section
+        <DocSection
+          id="conclusiones"
           icon={<FaShieldAlt />}
-          title="7. Recomendaciones y Conclusiones"
+          title="7. Conclusiones"
         >
 
-          <ul>
-            <li>Autenticación MFA obligatoria</li>
-
-            <li>Arquitectura Zero Trust</li>
-
-            <li>Principio de menor privilegio</li>
-
-            <li>Auditorías constantes</li>
-
-            <li>Monitoreo de credenciales filtradas</li>
-          </ul>
-
           <p>
-            El caso demuestra que incluso sistemas críticos
-            del Estado pueden verse comprometidos
-            por malas prácticas de seguridad.
+            El caso demuestra la importancia
+            de implementar medidas avanzadas
+            de ciberseguridad.
           </p>
 
-          <div className="quote">
-            La ciberseguridad ya no depende solamente
-            de leyes, sino también de cultura,
-            prevención y gobernanza tecnológica.
+          <div className="quote-box">
+            “La ciberseguridad depende tanto
+            de tecnología como de gobernanza.”
           </div>
 
-        </Section>
+        </DocSection>
 
       </main>
 

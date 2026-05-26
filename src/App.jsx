@@ -1,27 +1,30 @@
 import './App.css'
 
 import {
+  FaBook,
   FaShieldAlt,
+  FaDatabase,
   FaGavel,
   FaUserSecret,
-  FaDatabase,
-  FaExclamationTriangle,
-  FaLock,
-  FaUserCheck,
   FaBalanceScale,
+  FaLock,
+  FaCheckCircle,
 } from 'react-icons/fa'
 
 function Section({ icon, title, children }) {
   return (
     <section className="card">
+
       <div className="card-header">
         <div className="icon">{icon}</div>
+
         <h2>{title}</h2>
       </div>
 
       <div className="card-content">
         {children}
       </div>
+
     </section>
   )
 }
@@ -35,7 +38,7 @@ function App() {
       <header className="hero">
 
         <p className="tag">
-          INFORME FORENSE DIGITAL
+          INFORME JURÍDICO Y FORENSE DIGITAL
         </p>
 
         <h1>
@@ -44,7 +47,7 @@ function App() {
         </h1>
 
         <p className="subtitle">
-          Análisis jurídico, técnico y de protección de datos
+          Investigación jurídica, técnica y comparativa
           sobre el ataque a las bases de datos criminales francesas.
         </p>
 
@@ -55,29 +58,34 @@ function App() {
         {/* RESUMEN */}
 
         <Section
-          icon={<FaExclamationTriangle />}
-          title="Resumen del Caso"
+          icon={<FaBook />}
+          title="1. Resumen del Caso"
         >
 
           <p>
-            El 12 de diciembre de 2025 el Ministerio de Francia
-            sufrió un ciberataque dirigido a sus servidores de correo.
+            El 12 de diciembre de 2025 el Ministerio de Francia sufrió
+            un ciberataque dirigido a sus servidores de correo electrónico.
           </p>
 
           <p>
-            Los atacantes lograron acceder a dos de las bases de datos
-            más sensibles del Estado:
+            Durante el ataque los atacantes consiguieron acceso a dos
+            de las bases de datos más sensibles del Estado:
           </p>
 
           <ul>
-            <li>Historiales criminales</li>
-            <li>Lista de personas buscadas</li>
+            <li>Sistema de historiales criminales</li>
+            <li>Base de datos de personas buscadas</li>
           </ul>
 
           <p>
-            El gobierno reforzó medidas de seguridad mientras la
-            OFAC arrestó a un sospechoso de 22 años relacionado
-            con el ataque.
+            Mientras la investigación se desarrollaba, el gobierno francés
+            reforzó sus medidas de seguridad y controles de acceso.
+          </p>
+
+          <p>
+            Cinco días después, la Oficina de Anticiberdelincuencia
+            de Francia (OFAC) detuvo a un joven de 22 años relacionado
+            con el incidente.
           </p>
 
         </Section>
@@ -87,42 +95,52 @@ function App() {
 
         <Section
           icon={<FaGavel />}
-          title="Ley Francesa N°88-19"
+          title="2. Marco Legal Francés"
         >
 
           <p>
-            También conocida como Ley Godfrain,
-            esta normativa castiga delitos informáticos
-            relacionados con accesos no autorizados,
-            sabotaje y manipulación de datos.
+            Al detenido se le aplicó la Ley N°88-19,
+            también conocida como Ley Godfrain,
+            junto con los artículos 323-1 al 323-3.
+          </p>
+
+          <p>
+            Esta ley modifica el código penal francés
+            en el ámbito de fraudes informáticos.
           </p>
 
           <div className="mini-grid">
 
             <div className="mini-card">
-              <h3>Artículo 323-1</h3>
+              <h3>Acceso Fraudulento</h3>
 
               <p>
-                Acceso fraudulento a sistemas automatizados.
+                Acceso no autorizado a sistemas informáticos.
               </p>
             </div>
 
             <div className="mini-card">
-              <h3>Artículo 323-2</h3>
+              <h3>Alteración de Datos</h3>
 
               <p>
-                Obstaculización y alteración del sistema.
+                Destrucción, modificación o sabotaje de información.
               </p>
             </div>
 
             <div className="mini-card">
-              <h3>Artículo 323-3</h3>
+              <h3>Falsificación Informática</h3>
 
               <p>
-                Extracción y modificación ilegal de datos.
+                Manipulación y falsificación de documentos digitales.
               </p>
             </div>
 
+          </div>
+
+          <div className="quote">
+            Artículo 323-1: castiga el acceso fraudulento
+            a sistemas automatizados con penas de prisión
+            y multas económicas.
           </div>
 
         </Section>
@@ -132,27 +150,84 @@ function App() {
 
         <Section
           icon={<FaBalanceScale />}
-          title="Ley 21.459 de Chile"
+          title="3. Ley 21.459 de Chile"
         >
 
           <p>
-            Si este caso hubiera ocurrido en Chile,
-            los delitos podrían tipificarse bajo
-            la Ley 21.459.
+            La Ley 21.459 fue promulgada en Chile en 2022
+            para modernizar la legislación sobre delitos informáticos.
           </p>
+
+          <p>
+            Esta normativa reemplazó la antigua Ley 19.223
+            y adapta la legislación chilena al Convenio de Budapest.
+          </p>
+
+          <h3 className="sub-title">
+            Tipificación posible del caso
+          </h3>
 
           <ul>
             <li>Acceso ilícito</li>
-            <li>Exfiltración de información</li>
-            <li>Obtención de credenciales</li>
-            <li>Difusión de datos</li>
-            <li>Uso indebido de sistemas</li>
+
+            <li>Obtención indebida de información</li>
+
+            <li>Divulgación de datos</li>
+
+            <li>Uso malicioso de sistemas</li>
+
+            <li>Violación de medidas de seguridad</li>
           </ul>
 
+        </Section>
+
+
+        {/* COMPARACION */}
+
+        <Section
+          icon={<FaDatabase />}
+          title="4. Comparación Normativa"
+        >
+
           <p>
-            Esta ley adapta la legislación chilena
-            a estándares internacionales como el
-            Convenio de Budapest.
+            El informe compara distintos marcos regulatorios
+            aplicables al caso investigado.
+          </p>
+
+          <div className="mini-grid">
+
+            <div className="mini-card">
+              <h3>RGPD</h3>
+
+              <p>
+                Obligación de proteger datos personales
+                y notificar brechas de seguridad.
+              </p>
+            </div>
+
+            <div className="mini-card">
+              <h3>NIS 2</h3>
+
+              <p>
+                Exige medidas estrictas de ciberseguridad
+                en organismos esenciales del Estado.
+              </p>
+            </div>
+
+            <div className="mini-card">
+              <h3>ANSSI</h3>
+
+              <p>
+                Agencia francesa encargada de supervisar
+                incidentes críticos de seguridad.
+              </p>
+            </div>
+
+          </div>
+
+          <p>
+            El caso demuestra la importancia de la gobernanza,
+            auditorías y protección de infraestructura crítica.
           </p>
 
         </Section>
@@ -162,24 +237,33 @@ function App() {
 
         <Section
           icon={<FaUserSecret />}
-          title="Responsabilidades Penales"
+          title="5. Responsabilidades"
         >
 
           <p>
-            El principal sospechoso fue un joven
-            de 22 años vinculado a grupos hackers.
+            El principal sospechoso fue un joven de 22 años
+            vinculado a grupos de hackers organizados.
           </p>
 
           <p>
-            Según la investigación,
-            el ataque fue una represalia
-            por arrestos anteriores
+            Según la investigación, el ataque habría sido
+            una represalia por arrestos anteriores
             relacionados con ShinyHunters.
           </p>
 
-          <div className="quote">
-            “Ataque organizado contra sistemas estatales”
-          </div>
+          <ul>
+            <li>
+              Ataque a sistemas automatizados del Estado
+            </li>
+
+            <li>
+              Participación en grupo organizado
+            </li>
+
+            <li>
+              Acceso y manipulación de información sensible
+            </li>
+          </ul>
 
         </Section>
 
@@ -187,14 +271,18 @@ function App() {
         {/* DATOS */}
 
         <Section
-          icon={<FaDatabase />}
-          title="Protección de Datos"
+          icon={<FaLock />}
+          title="6. Tratamiento de Datos y Derechos ARCO"
         >
 
           <p>
-            Según la Ley 19.628 de Chile,
-            el Estado puede tratar datos penales,
-            pero debe garantizar su seguridad.
+            La Ley 19.628 permite a organismos públicos
+            tratar datos penales dentro de sus competencias.
+          </p>
+
+          <p>
+            Sin embargo, también exige medidas de seguridad
+            y protección adecuadas.
           </p>
 
           <div className="mini-grid">
@@ -203,7 +291,7 @@ function App() {
               <h3>Acceso</h3>
 
               <p>
-                Saber qué información posee el Estado.
+                Derecho a conocer qué información existe.
               </p>
             </div>
 
@@ -211,7 +299,7 @@ function App() {
               <h3>Rectificación</h3>
 
               <p>
-                Corregir datos incorrectos.
+                Corrección de datos incorrectos.
               </p>
             </div>
 
@@ -219,7 +307,7 @@ function App() {
               <h3>Cancelación</h3>
 
               <p>
-                Solicitar eliminación de datos.
+                Solicitud de eliminación de datos.
               </p>
             </div>
 
@@ -227,7 +315,7 @@ function App() {
               <h3>Oposición</h3>
 
               <p>
-                Limitar ciertos tratamientos de datos.
+                Limitar determinados tratamientos.
               </p>
             </div>
 
@@ -236,47 +324,41 @@ function App() {
         </Section>
 
 
-        {/* SEGURIDAD */}
+        {/* CONCLUSIONES */}
 
         <Section
           icon={<FaShieldAlt />}
-          title="Recomendaciones de Seguridad"
+          title="7. Recomendaciones y Conclusiones"
         >
 
           <ul>
             <li>Autenticación MFA obligatoria</li>
+
             <li>Arquitectura Zero Trust</li>
+
             <li>Principio de menor privilegio</li>
+
             <li>Auditorías constantes</li>
+
             <li>Monitoreo de credenciales filtradas</li>
           </ul>
 
-        </Section>
-
-
-        {/* REFLEXION */}
-
-        <Section
-          icon={<FaUserCheck />}
-          title="Reflexión Final"
-        >
-
           <p>
-            El caso demuestra que incluso
-            infraestructuras estatales críticas
-            pueden verse comprometidas por
-            malas prácticas de seguridad.
+            El caso demuestra que incluso sistemas críticos
+            del Estado pueden verse comprometidos
+            por malas prácticas de seguridad.
           </p>
 
-          <p>
-            La protección de datos ya no depende
-            solo de leyes, sino también de una
-            cultura sólida de ciberseguridad.
-          </p>
+          <div className="quote">
+            La ciberseguridad ya no depende solamente
+            de leyes, sino también de cultura,
+            prevención y gobernanza tecnológica.
+          </div>
 
         </Section>
 
       </main>
+
     </div>
   )
 }

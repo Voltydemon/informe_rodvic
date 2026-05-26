@@ -7,7 +7,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   background: #050816;
-  color: white;
+  color: #8fdfff;
   overflow-x: hidden;
 }
 
@@ -15,9 +15,10 @@ body {
   min-height: 100vh;
   padding: 40px;
   position: relative;
+
   background:
-    radial-gradient(circle at top left, #00ffff22, transparent 30%),
-    radial-gradient(circle at bottom right, #ff00ff22, transparent 30%),
+    radial-gradient(circle at top left, #00aaff22, transparent 30%),
+    radial-gradient(circle at bottom right, #0044ff22, transparent 30%),
     #050816;
 }
 
@@ -25,9 +26,13 @@ body {
   position: fixed;
   width: 700px;
   height: 700px;
-  background: radial-gradient(circle, #00ffff22 0%, transparent 70%);
+
+  background:
+    radial-gradient(circle, #00aaff33 0%, transparent 70%);
+
   top: -200px;
   left: -200px;
+
   z-index: 0;
   pointer-events: none;
 }
@@ -40,7 +45,7 @@ body {
 }
 
 .tag {
-  color: #00ffff;
+  color: #33bbff;
   letter-spacing: 3px;
   margin-bottom: 15px;
   font-size: 0.9rem;
@@ -54,18 +59,21 @@ body {
 }
 
 .hero span {
-  color: #00ffff;
+  color: #33bbff;
 
   text-shadow:
-    0 0 10px #00ffff,
-    0 0 20px #00ffff,
-    0 0 40px #00ffff;
+    0 0 10px #33bbff,
+    0 0 20px #33bbff,
+    0 0 40px #33bbff,
+    0 0 80px #33bbff;
 }
 
 .subtitle {
   max-width: 700px;
   margin: auto;
-  color: #b5b5b5;
+
+  color: #7fd8ff;
+
   font-size: 1.1rem;
 }
 
@@ -82,19 +90,19 @@ body {
 }
 
 .card {
-  background: rgba(12, 18, 40, 0.85);
+  background: rgba(8, 15, 40, 0.88);
 
-  border: 1px solid #00ffff44;
+  border: 1px solid #33bbff66;
 
   border-radius: 20px;
 
   padding: 25px;
 
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
 
   box-shadow:
-    0 0 15px #00ffff22,
-    0 0 30px #00ffff11;
+    0 0 15px #33bbff22,
+    0 0 30px #33bbff11;
 
   transition: all 0.3s ease;
 }
@@ -102,39 +110,41 @@ body {
 .card:hover {
   transform: translateY(-5px);
 
-  border-color: #00ffff;
+  border-color: #33bbff;
 
   box-shadow:
-    0 0 20px #00ffff55,
-    0 0 40px #00ffff33;
+    0 0 20px #33bbff88,
+    0 0 40px #33bbff55,
+    0 0 80px #33bbff22;
 }
 
 .card-header {
   display: flex;
-
   align-items: center;
-
   gap: 15px;
-
   margin-bottom: 20px;
 }
 
 .icon {
   font-size: 1.8rem;
+  color: #33bbff;
 
-  color: #00ffff;
+  text-shadow:
+    0 0 10px #33bbff;
 }
 
 .card h2 {
-  color: #00ffff;
-
+  color: #33bbff;
   font-size: 1.5rem;
+
+  text-shadow:
+    0 0 10px #33bbff55;
 }
 
 .card-content p {
-  color: #d0d0d0;
+  color: #9fdcff;
 
-  line-height: 1.7;
+  line-height: 1.8;
 
   margin-bottom: 15px;
 }
@@ -146,21 +156,19 @@ body {
 .card-content li {
   margin-bottom: 10px;
 
-  color: #e0e0e0;
+  color: #7fd8ff;
 }
 
 .mini-grid {
   display: grid;
-
   gap: 15px;
-
   margin-top: 20px;
 }
 
 .mini-card {
-  background: #101935;
+  background: #0b1d45;
 
-  border: 1px solid #00ffff33;
+  border: 1px solid #33bbff44;
 
   padding: 15px;
 
@@ -170,14 +178,25 @@ body {
 }
 
 .mini-card:hover {
-  border-color: #00ffff;
+  border-color: #33bbff;
+
   transform: scale(1.02);
+
+  box-shadow:
+    0 0 20px #33bbff33;
 }
 
 .mini-card h3 {
-  color: #00ffff;
+  color: #33bbff;
 
   margin-bottom: 10px;
+
+  text-shadow:
+    0 0 10px #33bbff44;
+}
+
+.mini-card p {
+  color: #9fdcff;
 }
 
 .quote {
@@ -185,21 +204,35 @@ body {
 
   padding: 15px;
 
-  border-left: 4px solid #00ffff;
+  border-left: 4px solid #33bbff;
 
-  background: #00ffff11;
+  background: #33bbff11;
 
-  color: #c8ffff;
+  color: #9fdcff;
 
   font-style: italic;
+
+  border-radius: 10px;
+}
+
+.sub-title {
+  margin-top: 20px;
+  margin-bottom: 15px;
+
+  color: #33bbff;
 }
 
 @media (max-width: 768px) {
+
   .hero h1 {
     font-size: 2.5rem;
   }
 
   .app {
     padding: 20px;
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
   }
 }
